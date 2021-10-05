@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mini-Activity 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form id="myForm">
+    <h1 id="output">Result</h1>
+    <p>Calculator</p>
+    <p>Input:</p>
+    <input
+      id="inputValue"
+      type ="text1"
+      value = ""
+      name= ""
+      placeholder="Input">
+    <input
+      id="inputValue2"
+      type ="text2"
+      value = ""
+      name= ""
+      placeholder="Input">
+      <br>
+      <button class="data-operation clear" id="clear" onclick="Clear()">Clear</button>
+    <br>
+    <br>
+    </form>
+    <br>
+    <button id="addition" onclick="addition()">+</button>
+    <button id="sub" onclick="subtract()">-</button>
+    <button id="mult" onclick="multiply()">x</button>
+    <button id="div" onclick="devide()">÷</button>
+    <button id="mod" onclick="mod()">%</button>
+  </div>
+  <script>
+  function addition(){
+    var value1 = document.getElementById("inputValue").value
+    var value2 = document.getElementById("inputValue2").value
+    var answer = +value1 + +value2;
+    document.getElementById("output").innerHTML = "The answer is " +answer;
+  }
+  function subtract(){
+    var value1 = document.getElementById("inputValue").value
+    var value2 = document.getElementById("inputValue2").value
+    var answer = value1 - value2;
+    document.getElementById("output").innerHTML = "The answer is " +answer;
+  }
+  function multiply(){
+    var value1 = document.getElementById("inputValue").value
+    var value2 = document.getElementById("inputValue2").value
+    var answer = value1 * value2;
+    document.getElementById("output").innerHTML = "The answer is " +answer;
+  }
+  function devide(){
+    var value1 = document.getElementById("inputValue").value
+    var value2 = document.getElementById("inputValue2").value
+    var answer = value1 / value2;
+    document.getElementById("output").innerHTML = "The answer is " +answer;
+  }
+  function mod(){
+    var value1 = document.getElementById("inputValue").value
+    var value2 = document.getElementById("inputValue2").value
+    var answer = value1 % value2;
+    document.getElementById("output").innerHTML = "The answer is " +answer;
+  }
+  function Clear(){
+    document.getElementById("inputValue").reset();
+  }
+  </script>
+</body>
+</html>
